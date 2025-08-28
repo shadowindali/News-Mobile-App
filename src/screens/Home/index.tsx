@@ -30,6 +30,7 @@ const Home = ({
   };
 
   // Sorry for the basic design i didn't have time to implement a better UI cause i have work in 30 min 😢
+  // and i didn't test it on ios cause i thought its a problem solving challenge so that i worked on my windows laptop 😢
 
   return (
     <SafeAreaView style={styles.SafeAreaView}>
