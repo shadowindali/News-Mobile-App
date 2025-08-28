@@ -48,8 +48,6 @@ const Search: React.FC<Props> = ({ navigation }) => {
       });
 
       setSearchResults(results);
-
-      // Add to recent searches if not already present
     } catch (error) {
       console.error('Search error:', error);
       Alert.alert(

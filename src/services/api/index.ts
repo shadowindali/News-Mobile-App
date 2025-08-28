@@ -25,29 +25,6 @@ export async function fetchNewsArticles({
   }
 }
 
-export async function findArticleByTitle(
-  title: string,
-  { lang = 'en', count = 10 } = {},
-) {
-  try {
-    const params = {
-      q: `"${title}"`,
-      lang,
-      max: count,
-      token: API_KEY,
-    };
-    const response = await axios.get(`${NEWS_API_URL}/search`, { params });
-    // Return the first matching article or null
-    return (
-      response.data.articles.find((article: any) => article.title === title) ||
-      null
-    );
-  } catch (error) {
-    console.error('Error finding article by title:', error);
-    throw error;
-  }
-}
-
 export async function searchArticlesByKeywords(
   keywords: string,
   { lang = 'en', count = 10, topic = '', country = '' } = {},

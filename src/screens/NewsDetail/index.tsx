@@ -26,7 +26,6 @@ interface Props {
 const NewsDetail: React.FC<Props> = ({ route, navigation }) => {
   const { article } = route.params;
 
-  // Format the published date
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
